@@ -1,36 +1,27 @@
-import React, { useState } from "react";
-import { FiSun, FiMoon } from "react-icons/fi";
+import React from "react";
+
 import NavBar from "./components/NavBar";
-import SocialLinks from "./components/SocialLinks";
 import Home from "./components/Home";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Experience from "./components/Experience";
+import DomaineCompetences from "./components/DomainesCompetences";
+import Presentation from "./components/Presentation";
 import Contact from "./components/Contact";
+import Valeurs from "./components/Valeurs";
+import Honoraires from "./pages/Honoraires";
 
 function App() {
-  const [lightMode, setLightMode] = useState(false);
-
-  const toggleLightMode = () => {
-    setLightMode(!lightMode);
-  };
-
   return (
-    <div className={lightMode ? "bg-gray-500" : ""}>
-      <NavBar />
+    <div>
+      <div className=" z-90">
+        <NavBar />
+      </div>
 
-      <SocialLinks />
-      <Home lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      <About lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      <Portfolio lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      <Experience lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      <Contact lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      <button
-        onClick={toggleLightMode}
-        className="fixed bottom-4 right-4 text-4xl text-gray-500 hover:text-gray-800"
-      >
-        {lightMode ? <FiMoon /> : <FiSun />}
-      </button>
+      <Home />
+      <Valeurs />
+
+      <DomaineCompetences />
+      <Presentation />
+      <Honoraires />
+      <Contact />
     </div>
   );
 }
