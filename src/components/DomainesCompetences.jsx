@@ -1,5 +1,4 @@
 import React from "react";
-import bgSaone from "../assets/bgcab.jpg";
 import GrayBg from "../assets/bluebg.jpg";
 import Celestins from "../assets/célestins.jpg";
 
@@ -51,7 +50,7 @@ function DomaineCompetences() {
       }}
     >
       <div
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-0 left-0 w-full h-full bg-fixed"
         style={{
           backgroundImage: `url(${Celestins})`,
           opacity: 0.8,
@@ -75,7 +74,7 @@ function DomaineCompetences() {
         </h1>
       </div>
       <div className="flex items-center justify-center">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-24 mb-48">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-24 mb-32">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -90,7 +89,7 @@ function DomaineCompetences() {
               </div>
               <div className="absolute inset-0 bg-black opacity-50"></div>
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-1000 group-hover:translate-y-0">
-                <h1 className="font-cinzel text-2xl  text-white mb-48">
+                <h1 className="font-cinzel text-2xl  text-white mb-32">
                   {card.title}
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">

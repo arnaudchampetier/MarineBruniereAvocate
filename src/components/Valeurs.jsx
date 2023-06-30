@@ -29,7 +29,7 @@ function Valeurs() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-300 text-gray-700 py-6 md:h-1/4">
       <h1
-        className="text-3xl md:text-4xl font-cinzel uppercase mb-24 mt-6 md:mt-12
+        className="text-2xl md:text-4xl font-cinzel uppercase mb-24 mt-6 md:mt-12
        relative cursor-pointer transition-all duration-500
       before:content-[''] before:absolute before:bottom-[-15px] before:left-1/2 before:-translate-x-1/2 
       before:w-0 before:h-0.5 before:rounded-full before:opacity-0 before:transition-all before:duration-500
@@ -39,14 +39,14 @@ function Valeurs() {
         Mes engagements
       </h1>
       <div className="md:w-full">
-        <div className="grid grid-cols-2 gap-2 md:gap-36 mt-4 md:flex md:justify-center ">
+        <div className="grid grid-cols-2 gap-0 xl:gap-24 lg:gap-18 md:gap-6 mt-4 md:flex md:justify-center ">
           {valeurs.map((valeur, index) => (
             <div
               key={index}
               className="flex flex-col items-center mb-24 md:mr-8"
             >
               {valeur.icon}
-              <p className="ml-2 text-md md:text-3xl font-cinzel uppercase mt-6 md:mt-12">
+              <p className="ml-2 text-md xl:text-3xl lg:text-2xl md:text-xl font-cinzel uppercase mt-6 md:mt-12">
                 {valeur.label}
               </p>
             </div>
