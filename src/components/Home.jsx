@@ -4,7 +4,7 @@ import LogoKevinWhite from "../assets/logoKevinWhite.svg";
 
 function Home() {
   return (
-    <div className="relative overflow-hidden h-screen">
+    <div id="home" className="relative overflow-hidden h-screen">
       <div
         className="absolute inset-0 bg-cover bg-no-repeat bg-center bg-fixed"
         style={{

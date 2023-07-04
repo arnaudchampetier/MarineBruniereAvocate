@@ -2,7 +2,10 @@ import React from "react";
 
 function Honoraires() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-300 text-gray-700 py-0 md:h-screen">
+    <div
+      id="honoraires"
+      className="flex flex-col items-center justify-center bg-gray-300 text-gray-700 py-0 md:h-screen"
+    >
       <div className="bg-blue-950 w-full text-center py-0 h-[140px]">
         <h1
           className="text-3xl md:text-4xl  text-white font-cinzel text-center flex justify-center mt-12 uppercase mb-24 relative cursor-pointer 
