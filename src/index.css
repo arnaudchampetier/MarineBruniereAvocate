@@ -9,6 +9,35 @@
   src: url("./fonts/semplicita.medium.otf") format("opentype");
 }
 
+/* Flippable Cards code CSS */
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover{
+  transform-style: preserve-3d;
+  transition: all 1.4s ease;
+}
+
+.front{
+  backface-visibility: hidden;
+}
+
+.back{
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.cardFlip:hover{
+  transform: rotateY(180deg);
+}
+
+.custom-mb {
+  margin-bottom: 40rem; /* Ajustez cette valeur selon vos besoins */
+}
 
 
 

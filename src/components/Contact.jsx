@@ -20,9 +20,9 @@ function Contact() {
     <div
       id="contact"
       name="contact"
-      className={`w-full min-h-screen flex flex-col items-center justify-center bg-blue-950`}
+      className={`w-full min-h-screen flex flex-col items-center justify-center bg-blue-950 `}
     >
-      <div className="mt-24 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="mt-24 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full ">
         <div className="pb-8 text-white">
           <p
             className={`md:text-4xl text-3xl font-cinzel font-bold inline border-b-4 border-gray-500 p-2`}

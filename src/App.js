@@ -7,6 +7,7 @@ import Presentation from "./components/Presentation";
 import Contact from "./components/Contact";
 import Valeurs from "./components/Valeurs";
 import Honoraires from "./pages/Honoraires";
+import FlippableCard from "./components/FlippableCard";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
 
       <Home />
       <Valeurs />
+      <FlippableCard />
 
-      <DomaineCompetences />
       <Presentation />
       <Honoraires />
       <Contact />

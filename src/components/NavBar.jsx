@@ -40,9 +40,13 @@ function NavBar() {
     "Harcèlement moral",
   ];
 
+  const handleNavToggle = () => {
+    setNav(!nav);
+  };
+
   return (
     <div className="relative z-50">
-      <div className="flex justify-between items-center w-full h-24 px-4 text-white bg-blue-950 fixed">
+      <div className="flex justify-between items-center w-full h-24 px-4 text-white bg-yellow-800 fixed">
         <div>
           <Link
             activeClass="active"
@@ -59,11 +63,23 @@ function NavBar() {
             />
           </Link>
         </div>
-        <ul className="hidden lg:flex mr-12 xl:mr-4">
+        <ul
+          className={`lg:flex mr-4 2xl:mr-24 ${
+            nav
+              ? " flex flex-col justify-center items-center space-y-12  text-lg md:text-3xl absolute top-0 left-0 w-full h-screen bg-yellow-950 p-8"
+              : "hidden"
+          }`}
+        >
+          <li className="flex   justify-end mb-4">
+            {nav && (
+              <div className="cursor-pointer" onClick={handleNavToggle}></div>
+            )}
+          </li>
+
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer font-larken uppercase text-gray-300 hover-scale-105 duration-300"
+              className="px-4 lg:px-3 cursor-pointer font-larken uppercase text-gray-300 hover-scale-105 duration-300"
             >
               {link === "Domaines de compétences" ? (
                 <span
@@ -73,14 +89,17 @@ function NavBar() {
                 >
                   <span className="mr-1">Domaines de</span>
                   <span>compétences</span>
-                  <FaChevronDown className="inline-block ml-1 text-gray-300" />
+                  {isLargeScreen && (
+                    <FaChevronDown className="inline-block ml-1 text-gray-300" />
+                  )}
 
                   {showDropdown && (
-                    <ul className="absolute right-124 ml-0 w-104 mt-7 px-8 bg-blue-950 p-8 rounded-md">
+                    <ul className="absolute right-124 ml-0 w-104 mt-7 px-8 bg-yellow-900 p-4 rounded-md">
+                      {" "}
                       {dropdownItems.map((item, index) => (
                         <li
                           key={index}
-                          className="text-gray-300 hover:text-white cursor-pointer mb-4"
+                          className="text-gray-300 hover:text-white cursor-pointer mb-2"
                         >
                           {item}
                         </li>
@@ -96,6 +115,7 @@ function NavBar() {
                   offset={-70}
                   duration={500}
                   activeClass="active"
+                  onClick={handleNavToggle}
                 >
                   {link}
                 </Link>
@@ -104,7 +124,7 @@ function NavBar() {
           ))}
         </ul>
         <div
-          onClick={() => setNav(!nav)}
+          onClick={handleNavToggle}
           className="cursor-pointer pr-4 z-10 text-gray-500 lg:hidden"
         >
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
