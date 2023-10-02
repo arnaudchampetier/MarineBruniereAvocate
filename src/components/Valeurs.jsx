@@ -9,44 +9,44 @@ import {
 function Valeurs() {
   const valeurs = [
     {
-      label: "Expertise",
-      icon: <FaRegLightbulb size={60} className="text-yellow-600" />,
+      label: "Ecoute",
+      icon: <FaRegLightbulb size={42} className="custom-color" />,
     },
     {
-      label: "Confiance",
-      icon: <FaHandshake size={60} className="text-yellow-600" />,
+      label: "Accompagnement",
+      icon: <FaHandshake size={42} className="custom-color" />,
     },
     {
       label: "Transparence",
-      icon: <FaUserSecret size={60} className="text-yellow-600" />,
+      icon: <FaUserSecret size={42} className="custom-color" />,
     },
     {
       label: "Confidentialité",
-      icon: <FaLock size={60} className="text-yellow-600" />,
+      icon: <FaLock size={42} className="custom-color" />,
     },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-300 text-gray-700 py-6 md:h-1/4">
+    <div className="flex flex-col items-center justify-center bg-gray-900 custom-color py-6 md:h-[350px]">
       <h1
-        className="text-2xl md:text-4xl font-cinzel uppercase mb-24 mt-6 md:mt-12
-       relative cursor-pointer transition-all duration-500
+        className="text-2xl md:text-4xl font-trebuc uppercase mb-12 md:mb-8 mt-6 md:mt-24 
+       relative cursor-pointer transition-all duration-500 custom-color
       before:content-[''] before:absolute before:bottom-[-15px] before:left-1/2 before:-translate-x-1/2 
       before:w-0 before:h-0.5 before:rounded-full before:opacity-0 before:transition-all before:duration-500
        before:bg-gradient-to-r before:from-gray-200 before:via-gray-800 before:to-gray-200 hover:before:w-full hover:before:opacity-100
       "
       >
-        Mes engagements
+        Nos engagements
       </h1>
-      <div className="md:w-full">
-        <div className="grid grid-cols-2 gap-0 xl:gap-24 lg:gap-18 md:gap-6 mt-4 md:flex md:justify-center ">
+      <div className="md:w-full w-full">
+        <div className="grid grid-cols-2 gap-0 xl:gap-24 lg:gap-6 md:gap-6 mt-4  md:flex md:justify-center bg-gray-300  ">
           {valeurs.map((valeur, index) => (
             <div
               key={index}
-              className="flex flex-col items-center mb-24 md:mr-8"
+              className="flex flex-col items-center mb-24  mt-12"
             >
-              {valeur.icon}
-              <p className="ml-2 text-md xl:text-3xl lg:text-2xl md:text-xl font-cinzel uppercase mt-6 md:mt-12">
+              <div className="">{valeur.icon}</div>
+              <p className="mr-8 text-md xl:text-2xl lg:text-xl md:text-lg font-trebuc text-gray-900 uppercase  mt-6 md:mt-12">
                 {valeur.label}
               </p>
             </div>

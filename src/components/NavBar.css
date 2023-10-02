@@ -1,0 +1,26 @@
+/* NavBar.css */
+
+.custom-color {
+    color: #b7925d;
+    /* Vous pouvez également spécifier d'autres propriétés CSS si nécessaire */
+  }
+  
+  .custom-color1 {
+    color: black;
+    /* Vous pouvez également spécifier d'autres propriétés CSS si nécessaire */
+  }
+
+  .custom-button {
+    background-color: #b7925d;
+    /* Vous pouvez également spécifier d'autres propriétés CSS si nécessaire */
+  }
+
+  .custom-border {
+    border-color: #b7925d;
+    /* Autres propriétés de bordure si nécessaire */
+  }
+
+  .bg-image {
+filter: grayscale(30%);
+  }
+  

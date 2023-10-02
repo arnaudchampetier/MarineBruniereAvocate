@@ -12,7 +12,7 @@ function FlippableCard() {
     {
       id: 1,
       front: "Discipline",
-      back: "Voici la section correspondante",
+      back: "Accompagnement et assistance juridiques et judiciaires pour les employeurs et les salariés (contrat de travail, embauche, rupture conventionnelle, licenciement, accord collectif, élections professionnelles…)",
       image: bgSaone,
       flipped: false,
     },
@@ -65,9 +65,10 @@ function FlippableCard() {
     <main>
       <div
         id="domaines"
-        className="min-h-screen bg-gray-300"
+        className="min-h-screen  bg-cover bg-no-repeat bg-center bg-fixed "
         style={{
           position: "relative",
+          backgroundImage: `url(${bgSaone})`,
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-fixed"></div>
@@ -112,7 +113,7 @@ function FlippableCard() {
                     alt=""
                     className="md:w-96 md:h-96 w-64 h-64 rounded-xl opacity-60"
                   />
-                  <p className="text-white text-2xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <p className="text-black text-xs md:text-sm font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     {card.back}
                   </p>
                 </div>

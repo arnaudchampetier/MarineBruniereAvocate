@@ -11,6 +11,7 @@ module.exports = {
         cinzel: ["Cinzel", "serif"],
         semplicita: ["Semplicita medium", "sans-serif"],
         larken: ["Larken Bold", "sans-serif"],
+        trebuc: ["Trebuchet MS"],
       },
     },
   },
